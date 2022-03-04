@@ -21,6 +21,7 @@ export type Status = {
     fcs: [FCState, FCState],
     block: "" | "moving" | "capturing" | "previewing"
     msg: Message
+    msg2: Message
 };
 
 export const statusDefault: Readonly<Status> = {
@@ -34,5 +35,6 @@ export const statusDefault: Readonly<Status> = {
     shutter: false,
     fcs: [{ ...fcStateDefault }, { ...fcStateDefault }],
     block: "",
-    msg: { msg: "Error: not connected.", t: Date.now() }
+    msg: { msg: "Error: not connected.", t: Date.now() },
+    msg2: { msg: "", t: Date.now() }
 };
